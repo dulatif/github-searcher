@@ -143,7 +143,11 @@ const HomePage: React.FC = () => {
         />
         <Select onChange={handleSearchSelect}>
           {searchOptions.map((item) => (
-            <option key={item.value} value={item.value}>
+            <option
+              key={item.value}
+              value={item.value}
+              selected={item.value === searchCategory}
+            >
               {item.label}
             </option>
           ))}
